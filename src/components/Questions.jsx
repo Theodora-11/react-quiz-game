@@ -1,4 +1,5 @@
 import React from 'react';
+import Results from ',/Results'
 
 function Questions() {
 
@@ -51,6 +52,21 @@ function Questions() {
     setUserChoices(newUserChoices); 
   }
 
+  function restartQuiz() {
+    setUserChoices(defaultChoices);
+    setCurrentQuestion(0);
+    setFinishGame(false);
+  }
+
+  if(finishGame) {
+    return (
+      <Results 
+        restartQuiz={restartQuiz} 
+        userChoices={userChoices} 
+        questionsBoard={questionsBoard}
+      />
+    )  
+  }
 
   return (
     <main>
