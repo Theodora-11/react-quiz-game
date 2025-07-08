@@ -1,0 +1,111 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family:'Courier New', Courier, monospace;
+  overflow: hidden;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-family:'Courier New', Courier, monospace;
+  cursor: pointer;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  font-weight: 600;
+  border-style: none;
+  border-radius: 4px;
+  
+}
+
+main {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: -80px; 
+  box-shadow: 0px 0px 6px 2px lightgray;
+  padding: 1rem 0;
+} 
+
+.title {
+  text-align: center;
+}
+
+.question {
+  text-align: center;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-weight: 600;
+  width: 80%;
+  margin: 0 auto 2rem;
+}
+
+.wrapper-options {
+  width: 90%;
+  max-width: 500px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  padding: 0.4em 0.8em;
+  text-align: left;
+}
+
+.option-btn.selected {
+ outline: 2px solid cornflowerblue;
+ background-color: rgb(179, 205, 255);
+}
+
+.wrapper-buttons {
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem auto;
+}
+
+.btn {
+  padding: 0.4em 0;
+  width: 50%;
+  max-width: 120px;
+  background-color: rgb(62, 129, 254);
+  color: white;
+  font-size: 1rem;
+}
+
+.btn:disabled {
+  background-color: rgba(107, 152, 236, 0.673);
+}
+
+.btn:not(:disabled):hover {
+  background-color: rgb(112, 162, 255);
+  color: black;
+}
+
+.results-wrapper {
+  text-align: center;
+  box-shadow: 0px 0px 6px 2px lightgray;
+  border-style: none;
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem 0;
+  margin-top: -200px;
+}
+
+.btn-restart-quiz {
+  padding: 0.4em 1em;
+  background-color: rgb(62, 129, 254);
+  color: white;
+  margin-bottom: 1rem;
+}
