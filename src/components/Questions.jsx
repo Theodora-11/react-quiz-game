@@ -32,6 +32,7 @@ function Questions() {
   const defaultChoices = [null, null, null];
   const [userChoices, setUserChoices] = React.useState(defaultChoices); 
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
+  const [finishGame, setFinishGame] = React.useState(false);
   const isUserSelected = userChoices[currentQuestion];
   const finishQuestions = currentQuestion === questionsBoard.length -1;
 
